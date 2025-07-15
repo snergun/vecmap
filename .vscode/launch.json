@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": "${command:pickArgs}"
+        },
+        {
+            "name": "Python Debugger: Map Embeddings",
+            "type": "debugpy",
+            "python": "/opt/conda/bin/python",
+            "request": "launch",
+            "program": "map_embeddings.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--identical", 
+                "/home/jovyan/pos_lm_v2/notebooks/data/wiki103_head_word2vec.txt",
+                "/home/jovyan/pos_lm_v2/notebooks/data/my_adt_head_word2vec.txt",
+                "src_mapped_emb.txt",
+                "trg_mapped_emb.txt",
+                "--cuda"
+                ],
+        },
+    ]
+}
